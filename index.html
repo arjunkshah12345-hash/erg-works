@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ERG Works</title>
+<link rel="icon" href="data:,">
+</head>
+<body>
+<title>ERG Works</title>
+<style>
+@font-face{font-family:Geist Variable;font-style:normal;font-display:swap;font-weight:100 900;src:url(assets/geist-cyrillic-ext-wght-normal.woff2)format("woff2-variations");unicode-range:U+460-52F,U+1C80-1C8A,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F}@font-face{font-family:Geist Variable;font-style:normal;font-display:swap;font-weight:100 900;src:url(assets/geist-cyrillic-wght-normal.woff2)format("woff2-variations");unicode-range:U+301,U+400-45F,U+490-491,U+4B0-4B1,U+2116}@font-face{font-family:Geist Variable;font-style:normal;font-display:swap;font-weight:100 900;src:url(assets/geist-vietnamese-wght-normal.woff2)format("woff2-variations");unicode-range:U+102-103,U+110-111,U+128-129,U+168-169,U+1A0-1A1,U+1AF-1B0,U+300-301,U+303-304,U+308-309,U+323,U+329,U+1EA0-1EF9,U+20AB}@font-face{font-family:Geist Variable;font-style:normal;font-display:swap;font-weight:100 900;src:url(assets/geist-latin-ext-wght-normal.woff2)format("woff2-variations");unicode-range:U+100-2BA,U+2BD-2C5,U+2C7-2CC,U+2CE-2D7,U+2DD-2FF,U+304,U+308,U+329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:Geist Variable;font-style:normal;font-display:swap;font-weight:100 900;src:url(assets/geist-latin-wght-normal.woff2)format("woff2-variations");unicode-range:U+??,U+131,U+152-153,U+2BB-2BC,U+2C6,U+2DA,U+2DC,U+304,U+308,U+329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}:root{--paper:#d8ccbb;--ink:#231b15;--bone:#efe7d9;--ember:#f67214;--ember-deep:#c23f00;--font:"Geist Variable", "Geist", "Helvetica Neue", Helvetica, Arial, sans-serif;--frame-x:clamp(1.25rem, 2.6vw, 2.5rem);--frame-y:clamp(1rem, 2.2vw, 1.75rem);--ease-out:cubic-bezier(.23, 1, .32, 1);--ease-in-out:cubic-bezier(.77, 0, .175, 1);--dur-press:.14s;--dur-fast:.2s;--dur-base:.26s;--dur-reveal:.76s;--chrome:var(--ink);--accent:var(--ember-deep)}@supports (color:lab(0% 0 0)){:root{--ink:lab(10.6392% 2.91762 5.48352);--bone:lab(91.9428% .991792 7.62982);--ember:lab(63.9553% 48.6676 68.5772);--ember-deep:lab(46.202% 55.5028 71.993)}}html.is-night{--chrome:var(--bone);--accent:var(--ember)}*,:before,:after{box-sizing:border-box}html{background:var(--paper);-webkit-text-size-adjust:100%;scrollbar-width:none}html::-webkit-scrollbar{display:none}body{background:var(--paper);font-family:var(--font);color:var(--ink);-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;overscroll-behavior-y:none;margin:0;font-size:1rem;line-height:1.55}h1,h2,p,ul{margin:0;padding:0}ul{list-style:none}a{color:inherit;text-decoration:none}button{font:inherit;color:inherit;cursor:pointer;background:0 0;border:0;padding:0}:focus-visible{outline:2px solid var(--accent);outline-offset:5px;border-radius:4px}::selection{background:var(--ember);color:#190f0a;color:lab(5.19158% 3.70757 3.91372)}#gl{touch-action:pan-y;width:100%;height:100%;display:block;position:fixed;inset:0}#track{pointer-events:none;width:1px}.noscript{text-align:center;position:fixed;inset:auto 0 2rem}#loader{z-index:50;background:var(--paper);color:var(--ink);transition:opacity 1s var(--ease-out);place-content:center;justify-items:center;gap:clamp(1.25rem,3vh,2.25rem);display:grid;position:fixed;inset:0}#loader.is-done{opacity:0;pointer-events:none}#loader>*{transition:opacity .36s var(--ease-out)}#loader.is-done>*{opacity:0}.loader__word{letter-spacing:-.065em;color:color-mix(in oklch, var(--ink) 13%, transparent);font-size:clamp(6rem,27vw,22rem);font-weight:700;line-height:.8;position:relative}.loader__fill{color:var(--ink);clip-path:inset(0 100% 0 0);position:absolute;inset:0}.loader__label{letter-spacing:-.005em;color:color-mix(in oklch, var(--ink) 62%, transparent);font-size:1rem;font-weight:500}.top{top:calc(var(--frame-y) + env(safe-area-inset-top,0px));left:var(--frame-x);right:var(--frame-x);z-index:20;height:2.75rem;color:var(--chrome);letter-spacing:-.005em;pointer-events:none;opacity:0;transition:opacity .9s var(--ease-out), color .7s var(--ease-out);grid-template-columns:1fr auto 1fr;align-items:center;font-size:.9375rem;font-weight:500;display:grid;position:fixed}.top.is-on{opacity:1}.top a,.top button{pointer-events:auto}.brand{justify-self:start;align-items:center;gap:.6rem;height:2.75rem;display:inline-flex}.brand__mark{width:1.15rem;height:1.15rem;transition:transform .5s var(--ease-out)}.brand__name{letter-spacing:-.035em;font-size:1.4rem;font-weight:700;line-height:1}.nav{transition:opacity .5s var(--ease-out);gap:clamp(.25rem,1.6vw,1.5rem);display:flex}.nav a{opacity:.5;height:2.75rem;transition:opacity var(--dur-fast) ease;align-items:center;padding:0 .6rem;display:inline-flex}.nav a.is-current{opacity:1}html.is-clear .nav{opacity:0}.sound{height:2.75rem;transition:transform var(--dur-press) var(--ease-out);justify-self:end;align-items:center;gap:.6rem;padding:0 .25rem;display:inline-flex}.sound:active,.cta:active{transform:scale(.97)}.sound b{opacity:.5;transition:opacity var(--dur-fast) ease;font-weight:500}.sound[aria-pressed=true] b{opacity:1}.sound__bars{align-items:center;gap:2.5px;height:13px;display:inline-flex}.sound__bars i{width:2px;height:100%;transition:transform .3s var(--ease-out);background:currentColor;border-radius:1px;transform:scaleY(.2)}.sound[aria-pressed=true] .sound__bars i{animation:.9s linear infinite alternate bars}.sound[aria-pressed=true] .sound__bars i:nth-child(2){animation-duration:.62s;animation-delay:-200ms}.sound[aria-pressed=true] .sound__bars i:nth-child(3){animation-duration:1.1s;animation-delay:-500ms}.sound[aria-pressed=true] .sound__bars i:nth-child(4){animation-duration:.76s;animation-delay:-90ms}@keyframes bars{0%{transform:scaleY(.2)}to{transform:scaleY(1)}}.scrollhint{left:50%;bottom:calc(var(--frame-y) + .25rem + env(safe-area-inset-bottom,0px));z-index:20;color:var(--ink);pointer-events:none;opacity:0;transition:opacity .6s var(--ease-out);flex-direction:column;align-items:center;gap:.2rem;font-size:.875rem;font-weight:500;display:inline-flex;position:fixed;transform:translate(-50%)}.scrollhint.is-on{opacity:.75}.scrollhint svg{animation:nudge 1.6s var(--ease-in-out) infinite alternate}@keyframes nudge{0%{transform:translateY(-1px)}to{transform:translateY(4px)}}.ch{z-index:10;padding:calc(var(--frame-y) + 4.5rem) calc(var(--frame-x) + clamp(0rem, 3.4vw, 4.25rem)) calc(var(--frame-y) + 4.5rem);pointer-events:none;visibility:hidden;transition:visibility 0s linear .32s;display:grid;position:fixed;inset:0}.ch.is-active{visibility:visible;transition-delay:0s}.ch a,.ch button{pointer-events:auto}.rise{margin:-.04em -.06em -.16em;padding:.04em .06em .16em;display:block;overflow:hidden}.rise>span{transition:transform .26s var(--ease-out);display:block;transform:translateY(112%)}.is-active .rise>span{transition-duration:1s;transition-delay:calc(var(--i,0) * 90ms + 60ms);transform:none}.r{opacity:0;transition:opacity .22s var(--ease-out), transform .22s var(--ease-out);transform:translateY(12px)}.is-active .r{opacity:1;transition-duration:var(--dur-reveal);transition-delay:calc(var(--i,0) * 80ms + .16s);transform:none}.ch--hero,.ch--thesis{color:var(--ink)}.ch--holding,.ch--signal{color:var(--bone);--accent:var(--ember)}.hero{place-self:end start;max-width:min(47rem,62vw)}.hero__title{letter-spacing:-.055em;font-size:clamp(2.8rem,6.9vw,7rem);font-weight:600;line-height:.96}.hero__body{text-wrap:pretty;max-width:34rem;color:color-mix(in oklch, var(--ink) 82%, transparent);margin-top:clamp(1.25rem,3vh,2.1rem);font-size:1.125rem;line-height:1.5}.thesis{place-self:center end;width:min(29rem,38vw);margin-top:4vh}.thesis__title{letter-spacing:-.035em;text-wrap:balance;font-size:clamp(1.6rem,2.6vw,2.5rem);font-weight:560;line-height:1.1}.thesis__facts{text-wrap:pretty;max-width:24rem;color:color-mix(in oklch, var(--ink) 74%, transparent);margin-top:1.4rem;font-size:1.0625rem;line-height:1.5}.holding{align-self:center;width:min(26rem,35vw)}[data-side=left] .holding{justify-self:start}[data-side=right] .holding{justify-self:end;margin-right:clamp(1rem,4vw,5rem)}.holding__name{letter-spacing:-.06em;margin:0 0 1.25rem -.05em;font-size:clamp(3.6rem,8vw,8rem);font-weight:600;line-height:.9}.holding__line{letter-spacing:-.025em;margin-bottom:.9rem;font-size:clamp(1.25rem,1.75vw,1.65rem);font-weight:540;line-height:1.2}.holding__body{text-wrap:pretty;max-width:44ch;color:color-mix(in oklch, var(--bone) 74%, transparent);font-size:1rem;line-height:1.58}.holding__facts{font-variant-numeric:tabular-nums;color:color-mix(in oklch, var(--bone) 52%, transparent);margin-top:1rem;font-size:.9375rem;font-weight:500}.cta{background:color-mix(in oklch, var(--bone) 13%, transparent);letter-spacing:-.005em;height:3rem;transition:background-color var(--dur-fast) ease, color var(--dur-fast) ease, transform var(--dur-press) var(--ease-out);border-radius:999px;align-items:center;gap:.9rem;margin-top:1.75rem;padding:0 .4rem 0 1.3rem;font-size:.9375rem;font-weight:540;display:inline-flex}.cta i{background:color-mix(in oklch, var(--bone) 14%, transparent);width:2.2rem;height:2.2rem;transition:transform var(--dur-base) var(--ease-out), background-color var(--dur-fast) ease;border-radius:50%;place-items:center;display:grid}@media (hover:hover) and (pointer:fine){.cta:hover{background:var(--bone);color:#17100b;color:lab(5.23725% 2.16219 3.38644)}.cta:hover i{background:#17100b1a;background:lab(5.23725% 2.16219 3.38644/.1);transform:translate(1px,1px)}.nav a:hover{opacity:1}.brand:hover .brand__mark{transform:rotate(180deg)}}.signal{place-self:center start;width:min(33rem,44vw)}.signal__title{letter-spacing:-.058em;margin:0 0 1rem -.05em;font-size:clamp(3.2rem,7vw,6.8rem);font-weight:600;line-height:.94}.signal__body{color:color-mix(in oklch, var(--bone) 74%, transparent);margin-bottom:1.6rem;font-size:1.0625rem}.links a{transition:opacity var(--dur-base) ease;grid-template-columns:1.9rem 1fr auto 1.25rem;align-items:baseline;column-gap:.75rem;padding:.62rem 0;display:grid}.links i{color:var(--accent);font-size:1.0625rem;font-style:normal;font-weight:640}.links i svg{transform:translateY(2px)}.links b{letter-spacing:-.035em;transition:transform .42s var(--ease-out);font-size:clamp(1.45rem,2.25vw,2.05rem);font-weight:580;line-height:1.1}.links span{color:color-mix(in oklch, var(--bone) 55%, transparent);transition:color var(--dur-fast) ease;font-size:.9375rem}.links a>svg{opacity:.4;transition:transform .42s var(--ease-out), opacity var(--dur-fast) ease, color var(--dur-fast) ease;place-self:center end}@media (hover:hover) and (pointer:fine){.links:hover a:not(:hover){opacity:.42}.links a:hover b{transform:translate(.5rem)}.links a:hover span{color:var(--bone)}.links a:hover>svg{opacity:1;color:var(--accent);transform:translate(2px,-2px)}}.links a:focus-visible b{transform:translate(.5rem)}.colophon{text-wrap:pretty;max-width:30rem;color:color-mix(in oklch, var(--bone) 48%, transparent);margin-top:1.6rem;font-size:.875rem;line-height:1.5}@media (max-width:860px){.nav{display:none}.top{grid-template-columns:1fr auto}.ch{padding:calc(var(--frame-y) + 3.75rem) calc(var(--frame-x) + .25rem) calc(var(--frame-y) + 2.5rem)}.hero,.thesis,.holding,.signal,[data-side=right] .holding{place-self:end start;width:100%;max-width:34rem;margin:0}.ch--hero{padding-bottom:calc(var(--frame-y) + 4.75rem)}.hero__title{font-size:clamp(2.5rem,12vw,4.2rem)}.hero__body{font-size:1rem}.thesis__title{font-size:1.6rem}.thesis__facts{margin-top:1rem;font-size:1rem}.holding__name{margin-bottom:.7rem;font-size:clamp(3.2rem,18.5vw,5.4rem)}.holding__body{font-size:.9375rem}.cta{margin-top:1.25rem}.signal__title{font-size:clamp(3rem,15vw,4.6rem)}.signal__body{margin-bottom:.9rem}.links a{grid-template-columns:1.6rem 1fr 1.2rem;padding:.6rem 0}.links span{grid-area:2/2;margin-top:.15rem}.links a>svg{grid-area:1/3}}@media (max-height:620px) and (min-width:861px){.hero__body,.holding__facts{display:none}}@media (prefers-reduced-motion:reduce){.r{transform:none}.rise>span{opacity:0;transition:opacity .3s var(--ease-out);transform:none}.is-active .rise>span{opacity:1;transition-duration:.3s;transition-delay:0s}.is-active .r{transition-duration:.3s;transition-delay:0s}.scrollhint svg,.sound[aria-pressed=true] .sound__bars i{animation:none}#loader{transition-duration:.3s}}
+/*$vite$:1*/
+</style>
+<canvas id="gl" aria-hidden="true" data-engine="three.js r186" width="1155" height="1272"></canvas>
+
+    <!-- ── loader: the wordmark fills as the world is built ───── -->
+    <div id="loader" role="status" aria-live="polite">
+      <p class="loader__word" aria-hidden="true">
+        <span>ERG</span>
+        <span class="loader__fill" id="loader-fill" style="clip-path: inset(0px 4.26% 0px 0px);">ERG</span>
+      </p>
+      <p class="loader__label" id="loader-label">Letting it cool</p>
+    </div>
+
+    <!-- ── chrome ─────────────────────────────────────────────── -->
+    <header class="top" id="chrome">
+      <a class="brand" href="#top" data-goto="0" aria-label="ERG Works, back to the start">
+        <svg class="brand__mark" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M3 3h18L12 12 21 21H3l9-9z" fill="currentColor"></path>
+        </svg>
+        <span class="brand__name">ERG</span>
+      </a>
+
+      <nav class="nav" aria-label="Chapters">
+        <a href="#erg" data-goto="0" data-nav="erg">The erg</a>
+        <a href="#holdings" data-goto="3.5" data-nav="holdings">Holdings</a>
+        <a href="#signal" data-goto="7.6" data-nav="signal">Signal</a>
+      </nav>
+
+      <button class="sound" id="sound" type="button" aria-pressed="false">
+        <span class="sound__bars" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+        <span>Sound <b id="sound-state">off</b></span>
+      </button>
+    </header>
+
+    <p class="scrollhint" id="scrollhint" aria-hidden="true">
+      <span>Scroll</span>
+      <svg viewBox="0 0 16 16" width="14" height="14"><path d="M3.5 6l4.5 4.5L12.5 6" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+    </p>
+
+    <!-- ── chapters ───────────────────────────────────────────── -->
+    <main id="top">
+      <section class="ch ch--hero" id="erg" data-ch="hero" aria-labelledby="hero-title">
+        <div class="hero">
+          <h1 class="hero__title" id="hero-title">
+            <span class="rise" style="--i: 0"><span>A sea of sand.</span></span>
+            <span class="rise" style="--i: 1"><span>A unit of work.</span></span>
+          </h1>
+          <p class="hero__body r" style="--i: 2">
+            An erg is both. ERG Works is a holding company: we buy small, durable businesses, run them on their
+            own revenue, and keep them for a very long time.
+          </p>
+        </div>
+      </section>
+
+      <section class="ch ch--thesis" data-ch="thesis" aria-labelledby="thesis-title">
+        <div class="thesis">
+          <h2 class="thesis__title r" id="thesis-title" style="--i: 0">
+            Sand turns to glass under enough heat and enough patience. Companies set the same way.
+          </h2>
+          <p class="thesis__facts r" style="--i: 1">
+            Three companies, the first held since 2016. No outside capital, and no exits planned.
+          </p>
+        </div>
+      </section>
+
+      <section class="ch ch--holding" id="holdings" data-ch="holding-0" data-side="left" aria-labelledby="h0-title">
+        <article class="holding">
+          <h2 class="holding__name" id="h0-title"><span class="rise" style="--i: 0"><span>Cairn</span></span></h2>
+          <p class="holding__line r" style="--i: 1">Wayfinding where the map runs out.</p>
+          <p class="holding__body r" style="--i: 2">
+            Offline navigation for crews who work past coverage: survey teams, rangers, long-haul drivers. Routes
+            are left by the people who went first, and stacked like stones.
+          </p>
+          <p class="holding__facts r" style="--i: 3">Held since 2016 · 38&nbsp;people · Profitable since 2018</p>
+          <a class="cta r" style="--i: 4" href="#signal" data-goto="7.6">
+            <span>Ask about Cairn</span>
+            <i aria-hidden="true"><svg viewBox="0 0 16 16" width="14" height="14"><path d="M4 4l8 8M12 5.5V12H5.5" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"></path></svg></i>
+          </a>
+        </article>
+      </section>
+
+      <section class="ch ch--holding" data-ch="holding-1" data-side="right" aria-labelledby="h1-title">
+        <article class="holding">
+          <h2 class="holding__name" id="h1-title"><span class="rise" style="--i: 0"><span>Sirocco</span></span></h2>
+          <p class="holding__line r" style="--i: 1">Wind, forecast by the hour.</p>
+          <p class="holding__body r" style="--i: 2">
+            Sirocco reads the air at hub height and tells grid operators what the next six hours will deliver.
+            Forty-one wind farms on three continents now schedule against it.
+          </p>
+          <p class="holding__facts r" style="--i: 3">Held since 2019 · 24&nbsp;people · Profitable since 2021</p>
+          <a class="cta r" style="--i: 4" href="#signal" data-goto="7.6">
+            <span>Ask about Sirocco</span>
+            <i aria-hidden="true"><svg viewBox="0 0 16 16" width="14" height="14"><path d="M4 4l8 8M12 5.5V12H5.5" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"></path></svg></i>
+          </a>
+        </article>
+      </section>
+
+      <section class="ch ch--holding" data-ch="holding-2" data-side="left" aria-labelledby="h2-title">
+        <article class="holding">
+          <h2 class="holding__name" id="h2-title"><span class="rise" style="--i: 0"><span>Tessera</span></span></h2>
+          <p class="holding__line r" style="--i: 1">Walls from small, exact parts.</p>
+          <p class="holding__body r" style="--i: 2">
+            Interlocking ceramic block fired from desert sand. No mortar and no cutting on site: a wall goes up in
+            a day and comes apart again without waste.
+          </p>
+          <p class="holding__facts r" style="--i: 3">Held since 2022 · 61&nbsp;people · Breaks even in 2026</p>
+          <a class="cta r" style="--i: 4" href="#signal" data-goto="7.6">
+            <span>Ask about Tessera</span>
+            <i aria-hidden="true"><svg viewBox="0 0 16 16" width="14" height="14"><path d="M4 4l8 8M12 5.5V12H5.5" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"></path></svg></i>
+          </a>
+        </article>
+      </section>
+
+      <section class="ch ch--signal" id="signal" data-ch="signal" aria-labelledby="signal-title">
+        <div class="signal">
+          <h2 class="signal__title" id="signal-title"><span class="rise" style="--i: 0"><span>Send word.</span></span></h2>
+          <p class="signal__body r" style="--i: 1">We answer every letter ourselves, usually within the week.</p>
+          <ul class="links">
+            <li class="r" style="--i: 2">
+              <a href="mailto:hello@erg.example" data-shape="at">
+                <i aria-hidden="true">@</i><b>Correspondence</b><span>hello@erg.example</span>
+                <svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><path d="M4.5 11.5l7-7M5.5 4.5h6v6" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+              </a>
+            </li>
+            <li class="r" style="--i: 3">
+              <a href="#signal" data-shape="pilcrow">
+                <i aria-hidden="true">¶</i><b>Field notes</b><span>Quarterly letters, 2016 to now</span>
+                <svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><path d="M4.5 11.5l7-7M5.5 4.5h6v6" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+              </a>
+            </li>
+            <li class="r" style="--i: 4">
+              <a href="#signal" data-shape="plus">
+                <i aria-hidden="true">+</i><b>Open roles</b><span>Two, both at Tessera</span>
+                <svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><path d="M4.5 11.5l7-7M5.5 4.5h6v6" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+              </a>
+            </li>
+            <li class="r" style="--i: 5">
+              <a href="#signal" data-shape="arrow">
+                <i aria-hidden="true"><svg viewBox="0 0 16 16" width="15" height="15"><path d="M4.5 11.5l7-7M5.5 4.5h6v6" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"></path></svg></i><b>Elsewhere</b><span>Are.na, GitHub</span>
+                <svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><path d="M4.5 11.5l7-7M5.5 4.5h6v6" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+              </a>
+            </li>
+          </ul>
+          <p class="colophon r" style="--i: 6">
+            © 2026 ERG Works. A concept site; the companies are fictional. Keep scrolling and the sand settles back
+            where it started.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <div id="track" aria-hidden="true" style="height: 9935px;"></div>
+    <noscript><p class="noscript">ERG Works needs JavaScript and WebGL to draw the desert.</p></noscript>
+<script type="module" src="assets/app.js"></script>
+
+</body>
+</html>
